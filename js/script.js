@@ -81,8 +81,7 @@ function removeMovies() {
 async function catchFilm2(x, y) {
   try {
     const api2 = "https://tmdb-proxy.cubos-academy.workers.dev/3/search/movie?language=pt-BR&include_adult=false&query=";
-    const inputValue = input.value
-    console.log(inputValue)
+    const inputValue = input.value;
     const response = await axios.get(`${api2}${inputValue}`)
     for (i = x; i < y; i++) {
       let urlTeste = response.data.results[i].poster_path;
